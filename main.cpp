@@ -2,6 +2,7 @@
 #include "./utils/memory.h" 
 #include "./utils/offset.h" 
 #include <string>
+#include <thread> // crear hilos
 
 #define F2 0x3C0000
 
@@ -24,8 +25,12 @@ int main() {
 	ventana = FindWindow(0, "Counter-Strike");
 	HL_BASE_ADDRESS = game->GetModuleAddress(gameName);
 
-	//MenuSpeedBunny();
-	//BunnyHop();
+	// Features en distintos hilos de ejecución
+	thread tBunnyHop(BunnyHop);
+	thread tMenuSpeedBunny(MenuSpeedBunny);
+
+	tBunnyHop.join();
+	tMenuSpeedBunny.join();
 	
     return 0;
 }
