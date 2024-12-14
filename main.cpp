@@ -24,8 +24,8 @@ int main() {
 	ventana = FindWindow(0, "Counter-Strike");
 	HL_BASE_ADDRESS = game->GetModuleAddress(gameName);
 
-	MenuSpeedBunny();
-	BunnyHop();
+	//MenuSpeedBunny();
+	//BunnyHop();
 	
     return 0;
 }
