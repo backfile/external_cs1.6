@@ -2,6 +2,7 @@
 # Created by https://www.toptal.com/developers/gitignore/api/windows,c++,visualstudio,executable
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,c++,visualstudio,executable
 
+cheats-proyect/
 build/
 output/
 

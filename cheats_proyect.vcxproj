@@ -134,6 +134,8 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="features\BunnyHop.h" />
+    <ClInclude Include="features\MenuSpeedBunny.h" />
     <ClInclude Include="utils\offset.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
