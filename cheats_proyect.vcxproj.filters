@@ -29,5 +29,8 @@
     <ClInclude Include="features\MenuSpeedBunny.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="features\ThirdPerson.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

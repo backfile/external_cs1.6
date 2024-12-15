@@ -136,6 +136,7 @@
   <ItemGroup>
     <ClInclude Include="features\BunnyHop.h" />
     <ClInclude Include="features\MenuSpeedBunny.h" />
+    <ClInclude Include="features\ThirdPerson.h" />
     <ClInclude Include="utils\offset.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

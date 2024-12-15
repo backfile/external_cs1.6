@@ -1,6 +1,5 @@
 #pragma once
 
-#include <Windows.h>
 #include <Tlhelp32.h>
 
 using namespace std;
@@ -9,7 +8,7 @@ using namespace std;
 
 class Memory{
 private:
-	uintptr_t processID = 2;
+	DWORD processID = 2;
 	HANDLE hprocess = nullptr;
 public:
 	Memory(char* nombre) {
@@ -73,7 +72,7 @@ public:
 
 	}
 
-	uintptr_t GetProcessID() {
+	DWORD GetProcessID() {
 		return processID;
 	}
 

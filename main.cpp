@@ -1,3 +1,4 @@
+#include <Windows.h>
 #include <iostream>
 #include "./utils/memory.h" 
 #include "./utils/offset.h" 
@@ -7,16 +8,19 @@
 
 using namespace std;
 
+
 // Datos globles
 char gameName[] = "hl.exe";
 Memory* game;  // Puntero global si necesitas acceso desde otro lugar.
 HWND ventana;
 uintptr_t HL_BASE_ADDRESS;
 
-#include "./features/BunnyHop.h"
-#include "./features/MenuSpeedBunny.h"
 
 // Features
+#include "./features/BunnyHop.h"
+#include "./features/MenuSpeedBunny.h"
+#include "./features/ThirdPerson.h"
+
 
 int main() {
    
@@ -25,13 +29,15 @@ int main() {
 	HL_BASE_ADDRESS = game->GetModuleAddress(gameName);
 
 	// Features en distintos hilos de ejecución
+	
 	thread tBunnyHop(BunnyHop);
 	thread tMenuSpeedBunny(MenuSpeedBunny);
+	thread tThirdPerson(ThirdPerson);
 
-	// Se podria separar la accion de saltar y la de leer en 2 hilos diferentes
 	tBunnyHop.join();
 	tMenuSpeedBunny.join();
-	
+	tThirdPerson.join();
+
     return 0;
 }
 
