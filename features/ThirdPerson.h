@@ -20,5 +20,6 @@ void ThirdPerson() {
 			//Desactivar Modo en tercera persona
 			game->Write(HL_BASE_ADDRESS + FL_THIRDPERSON, third_person_off);
 		}
+		Sleep(1);
 	}
 }

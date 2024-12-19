@@ -11,6 +11,6 @@ void BunnyHop() {
 				SendMessage(ventana, WM_KEYUP, F2, F2);
 			}
 		}
-
+		Sleep(1);
 	}
 }
